@@ -45,7 +45,7 @@ class MCServ(commands.Cog) :
     def __init__(self, client) :
         self.client = client
 
-    @app_commands.command(name = 'serverstatus', description = 'Server information')
+    @app_commands.command(name = 'serverstatus', description = 'Fetch server\'s status/informations')
     @app_commands.describe(ip = "Default: jumpcraft.org", motd = "Default: False", playerlist = "Default: False")
     @app_commands.choices(motd = [Choice(name = 'True', value = 1), Choice(name = 'False', value = 0)], playerlist = [Choice(name = 'True', value = 1), Choice(name = 'False', value = 0)])
     async def mcserv(self, interaction: discord.Interaction, ip:str = 'jumpcraft.org', motd:int = 0, playerlist:int = 0):

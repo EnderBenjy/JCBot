@@ -9,11 +9,7 @@ class Test(commands.Cog):
 
     @app_commands.command(name = 'test', description = ('random command'))    
     async def test_slash(self, interaction: discord.Interaction): 
-      await interaction.response.send_message('ca marche !')
-
-    @commands.command()
-    async def test(self, ctx):
-      await ctx.send('salut')
+      await interaction.response.send_message(f'Salut {interaction.user.name}!')
       
 async def setup(client):
     await client.add_cog(Test(client))
