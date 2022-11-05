@@ -19,7 +19,7 @@ async def on_ready():
     print('Connecté comme {0} ({0.id})'.format(bot.user))
   
     # Load Modules
-    modules = ['Translator', 'Test', 'Leveling', 'Status']
+    modules = ['Translator', 'Test', 'Leveling', 'Status', 'Speedrun']
     for module in modules:
         try:
             await bot.load_extension('cogs.' + module)
